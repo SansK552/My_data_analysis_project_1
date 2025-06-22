@@ -38,6 +38,7 @@ Older individuals, especially those over 60, show a higher incidence of heart di
 MySQL: For efficient data querying, aggregation, and initial data exploration.
 RStudio: For advanced statistical analysis, data visualization, and building predictive models.
         ggplot2 library: Used for creating high-quality data visualizations.
+Dataset: Kaggle - [heart failure prediction dataset]https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
 
 
 
