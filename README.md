@@ -32,7 +32,11 @@ Repository contains several SQL scripts used to extract specific insights and ag
    i. Logistic Regression Model: Builds a logistic regression model to predict HeartDisease based on Age, Cholesterol, MaxHR, Sex, and ChestPainType.
 
 # Insights & Model
-Older individuals, especially those over 60, show a higher incidence of heart disease. Cholesterol levels vary with heart disease status and gender, with the top 5 highest cases identified. Certain chest pain types are more common among heart patients. Exercise-induced angina correlates with lower average MaxHR, which also differs by sex. High blood pressure and cholesterol coexist in specific patients. ST_Slope emerges as a relevant indicator. A logistic regression model using Age, Cholesterol, MaxHR, Sex, and ChestPainType helps predict heart disease likelihood effectively.
+Older individuals, especially those over 60, show a higher incidence of heart disease. Cholesterol levels vary with heart disease status and gender, with the top 5 highest cases identified. Certain chest pain types are more common among heart patients. Exercise-induced angina correlates with lower average MaxHR, which also differs by sex. High blood pressure and cholesterol coexist in specific patients. ST_Slope emerges as a relevant indicator. A logistic regression model using Age, Cholesterol, MaxHR, Sex and ChestPainType serves as a baseline to describe which factors are associated with heart disease.
+
+# Known Limitations
+- Cholesterol = 0 appears to represent missing values in this dataset (visible in the cholesterol boxplot). This likely biases the cholesterol averages in sql_1 and the model.
+- ST_Slope and ExerciseAngina showed strong signals in the SQL analysis but are not yet in the model.
 
 # Technologies Used
 MySQL: For efficient data querying, aggregation, and initial data exploration.
