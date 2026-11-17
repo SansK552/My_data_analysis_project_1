@@ -34,3 +34,7 @@ ggplot(subset(heart_failure_prediction, HeartDisease == 1), aes(x = ChestPainTyp
 ggplot(heart_failure_prediction, aes(x = MaxHR, fill = Sex)) +
   geom_density(alpha = 0.5) +
   ggtitle("Max Heart Rate Distribution by Sex")
+
+# Odds ratios with 95% confidence intervals
+odds_ratios <- exp(cbind(OR = coef(model), confint.default(model)))
+round(odds_ratios, 3)
