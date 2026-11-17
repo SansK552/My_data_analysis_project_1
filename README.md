@@ -1,4 +1,4 @@
-# My_data_analysis_project_1
+$# My_data_analysis_project_1
 This repository contains an exploratory data analysis (EDA) and predictive modeling of a heart failure prediction dataset using MySQL for data querying and RStudio for statistical analysis and visualization.
 
 # Dataset
@@ -34,9 +34,9 @@ Repository contains several SQL scripts used to extract specific insights and ag
 # Insights & Model
 Older individuals, especially those over 60, show a higher incidence of heart disease. Cholesterol levels vary with heart disease status and gender, with the top 5 highest cases identified. Certain chest pain types are more common among heart patients. Exercise-induced angina correlates with lower average MaxHR, which also differs by sex. High blood pressure and cholesterol coexist in specific patients. ST_Slope emerges as a relevant indicator. A logistic regression model using Age, Cholesterol, MaxHR, Sex and ChestPainType serves as a baseline to describe which factors are associated with heart disease.
 
-# Known Limitations
-- Cholesterol = 0 appears to represent missing values in this dataset (visible in the cholesterol boxplot). This likely biases the cholesterol averages in sql_1 and the model.
-- ST_Slope and ExerciseAngina showed strong signals in the SQL analysis but are not yet in the model.
+# Data Quality Note
+- Cholesterol = 0 represents missing values: 172 of 918 records (18.7%). Corrected cholesterol averages, which exclude these records, are in sql_9.sql with results in sql_9_result_2.csv.
+- ST_Slope and ExerciseAngina showed strong signals in the SQL analysis and are natural candidates to add to the model in a next iteration.
 
 # Technologies Used
 MySQL: For efficient data querying, aggregation, and initial data exploration.
